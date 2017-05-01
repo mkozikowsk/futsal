@@ -18,7 +18,7 @@ namespace Futsal_1.Controllers
         // GET: Teams
         public ActionResult Index()
         {
-            var teams = db.Teams.Include(t => t.Choach);
+            var teams = db.Teams.Include(t => t.Coach);
             return View(teams.ToList());
         }
 
@@ -40,7 +40,7 @@ namespace Futsal_1.Controllers
         // GET: Teams/Create
         public ActionResult Create()
         {
-            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FirstName");
+            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FullName");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace Futsal_1.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FirstName", team.CoachId);
+            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FullName", team.CoachId);
             return View(team);
         }
 
@@ -74,7 +74,7 @@ namespace Futsal_1.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FirstName", team.CoachId);
+            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FullName", team.CoachId);
             return View(team);
         }
 
@@ -91,7 +91,7 @@ namespace Futsal_1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FirstName", team.CoachId);
+            ViewBag.CoachId = new SelectList(db.Coaches, "Id", "FullName", team.CoachId);
             return View(team);
         }
 
