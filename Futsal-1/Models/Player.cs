@@ -34,6 +34,13 @@ namespace Futsal_1.Models
 
         public virtual Team Team { get; set; }
 
+        public string FullName
+        {
+            get
+            {
+                return string.Format("{0} {1}", FirstName, LastName);
+            }
+        }
         public int Age
         {
             get
