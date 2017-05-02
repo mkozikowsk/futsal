@@ -37,10 +37,11 @@ namespace Futsal_1.Controllers
             return View(player);
         }
 
-        // GET: Players/Create
-        public ActionResult Create()
+        // GET: Players/Create/5
+        public ActionResult Create(int? id)
         {
             ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name");
+            ViewBag.teamCreateId = id;
             return View();
         }
 

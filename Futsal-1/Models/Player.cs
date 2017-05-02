@@ -20,7 +20,6 @@ namespace Futsal_1.Models
         public string LastName { get; set; }
 
         [Display(Name = "Data urodzenia")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DateOfBirth { get; set; }
 
         [Display(Name = "Wzrost")]
