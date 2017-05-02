@@ -13,7 +13,7 @@ namespace Futsal_1.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "Nazwa drużyny")]
+        [Display(Name = "Drużyna")]
         public string Name { get; set; }
         [Display(Name = "Trener")]
         public int CoachId { get; set; }
