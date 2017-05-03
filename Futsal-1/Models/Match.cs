@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -14,5 +15,6 @@ namespace Futsal_1.Models
         public int TeamId { get; set; }
 
         public virtual Team Teams { get; set; }
+
     }
 }

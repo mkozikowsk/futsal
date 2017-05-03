@@ -18,6 +18,7 @@ namespace Futsal_1.Controllers
         // GET: Matches
         public ActionResult Index()
         {
+            var matches = db.Matches.Include(p => p.Teams);
             return View(db.Matches.ToList());
         }
 
@@ -39,6 +40,7 @@ namespace Futsal_1.Controllers
         // GET: Matches/Create
         public ActionResult Create()
         {
+            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name");
             return View();
         }
 
@@ -47,7 +49,7 @@ namespace Futsal_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,StartTime,EndTime")] Match match)
+        public ActionResult Create([Bind(Include = "Id,StartTime,EndTime,TeamId")] Match match)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +58,7 @@ namespace Futsal_1.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name", match.TeamId);
             return View(match);
         }
 
