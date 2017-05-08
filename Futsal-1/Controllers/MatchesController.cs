@@ -19,7 +19,7 @@ namespace Futsal_1.Controllers
         public ActionResult Index()
         {
             var Matches = db.Matches.Include(t => t.AwayTeam).Include(t => t.HomeTeam);
-            return View(Matches.ToList());
+           return View(Matches.ToList());
         }
 
         // GET: Matches/Details/5

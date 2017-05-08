@@ -15,5 +15,9 @@ namespace Futsal_1.Models
 
         public virtual Team HomeTeam { get; set; }
         public virtual Team AwayTeam { get; set; }
+
+        public int? ArbiterId { get; set; }
+
+        public virtual Arbiter Arbiter { get; set; }
     }
 }

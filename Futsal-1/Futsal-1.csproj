@@ -212,8 +212,25 @@
     <Compile Include="Migrations\201705081044316_Matches.Designer.cs">
       <DependentUpon>201705081044316_Matches.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705081122429_Arbiter.cs" />
+    <Compile Include="Migrations\201705081122429_Arbiter.Designer.cs">
+      <DependentUpon>201705081122429_Arbiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705081126333_updateArbiter.cs" />
+    <Compile Include="Migrations\201705081126333_updateArbiter.Designer.cs">
+      <DependentUpon>201705081126333_updateArbiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705081137489_MatchesArbiter.cs" />
+    <Compile Include="Migrations\201705081137489_MatchesArbiter.Designer.cs">
+      <DependentUpon>201705081137489_MatchesArbiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705081141529_ArbiterUpdate.cs" />
+    <Compile Include="Migrations\201705081141529_ArbiterUpdate.Designer.cs">
+      <DependentUpon>201705081141529_ArbiterUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Arbiter.cs" />
     <Compile Include="Models\Coach.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -416,6 +433,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705081044316_Matches.resx">
       <DependentUpon>201705081044316_Matches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705081122429_Arbiter.resx">
+      <DependentUpon>201705081122429_Arbiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705081126333_updateArbiter.resx">
+      <DependentUpon>201705081126333_updateArbiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705081137489_MatchesArbiter.resx">
+      <DependentUpon>201705081137489_MatchesArbiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705081141529_ArbiterUpdate.resx">
+      <DependentUpon>201705081141529_ArbiterUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
