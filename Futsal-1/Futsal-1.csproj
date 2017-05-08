@@ -194,9 +194,9 @@
     <Compile Include="Controllers\CoachesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MatchesController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
+    <Compile Include="Controllers\MatchesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,14 +204,22 @@
     <Compile Include="Migrations\201705030916248_MatchMigration.Designer.cs">
       <DependentUpon>201705030916248_MatchMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705041619034_testmatch.cs" />
+    <Compile Include="Migrations\201705041619034_testmatch.Designer.cs">
+      <DependentUpon>201705041619034_testmatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705081044316_Matches.cs" />
+    <Compile Include="Migrations\201705081044316_Matches.Designer.cs">
+      <DependentUpon>201705081044316_Matches.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Coach.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Match.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\Match.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -383,11 +391,9 @@
     <Content Include="Views\Coaches\Details.cshtml" />
     <Content Include="Views\Coaches\Edit.cshtml" />
     <Content Include="Views\Coaches\Index.cshtml" />
+    <Content Include="Views\Matches\Index.cshtml" />
     <Content Include="Views\Matches\Create.cshtml" />
     <Content Include="Views\Matches\Delete.cshtml" />
-    <Content Include="Views\Matches\Details.cshtml" />
-    <Content Include="Views\Matches\Edit.cshtml" />
-    <Content Include="Views\Matches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -404,6 +410,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705030916248_MatchMigration.resx">
       <DependentUpon>201705030916248_MatchMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041619034_testmatch.resx">
+      <DependentUpon>201705041619034_testmatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705081044316_Matches.resx">
+      <DependentUpon>201705081044316_Matches.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

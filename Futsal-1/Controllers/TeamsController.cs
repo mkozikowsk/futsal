@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
 using Futsal_1.Context;
 using Futsal_1.Models;
 
@@ -16,9 +17,28 @@ namespace Futsal_1.Controllers
         private FutsalContext db = new FutsalContext();
 
         // GET: Teams
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
             var teams = db.Teams.Include(t => t.Coach);
+            if (id != null)
+            {
+                Team team = db.Teams.Find(id);
+                if (team == null)
+                {
+                    return HttpNotFound();
+                }
+                try
+                {
+                    db.Teams.Remove(team);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                }
+                return RedirectToAction("Index");
+            }
+
+            
             return View(teams.ToList());
         }
 
@@ -116,8 +136,19 @@ namespace Futsal_1.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Team team = db.Teams.Find(id);
-            db.Teams.Remove(team);
-            db.SaveChanges();
+            try
+            {
+                db.Teams.Remove(team);
+                db.SaveChanges();
+            }
+            catch (Exception en)
+            {
+                if (en.ToString().Contains("REFERENCE constraint \"FK"))
+                {
+                    ModelState.AddModelError("", "Nie można usunąć drużyny uczestniczącej w rozgrywkach");
+                    return View(team);
+                }  
+            }
             return RedirectToAction("Index");
         }
 

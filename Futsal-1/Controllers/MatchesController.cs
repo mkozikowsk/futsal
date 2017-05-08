@@ -18,8 +18,8 @@ namespace Futsal_1.Controllers
         // GET: Matches
         public ActionResult Index()
         {
-            var matches = db.Matches.Include(p => p.Teams);
-            return View(db.Matches.ToList());
+            var Matches = db.Matches.Include(t => t.AwayTeam).Include(t => t.HomeTeam);
+            return View(Matches.ToList());
         }
 
         // GET: Matches/Details/5
@@ -29,18 +29,19 @@ namespace Futsal_1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Match match = db.Matches.Find(id);
-            if (match == null)
+            Match testMatch = db.Matches.Find(id);
+            if (testMatch == null)
             {
                 return HttpNotFound();
             }
-            return View(match);
+            return View(testMatch);
         }
 
         // GET: Matches/Create
         public ActionResult Create()
         {
-            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name");
+            ViewBag.AwayTeamId = new SelectList(db.Teams, "Id", "Name");
+            ViewBag.HomeTeamId = new SelectList(db.Teams, "Id", "Name");
             return View();
         }
 
@@ -49,17 +50,18 @@ namespace Futsal_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,StartTime,EndTime,TeamId")] Match match)
+        public ActionResult Create([Bind(Include = "Id,StartTime,HomeTeamId,AwayTeamId")] Match testMatch)
         {
             if (ModelState.IsValid)
             {
-                db.Matches.Add(match);
+                db.Matches.Add(testMatch);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name", match.TeamId);
-            return View(match);
+            ViewBag.AwayTeamId = new SelectList(db.Teams, "Id", "Name", testMatch.AwayTeamId);
+            ViewBag.HomeTeamId = new SelectList(db.Teams, "Id", "Name", testMatch.HomeTeamId);
+            return View(testMatch);
         }
 
         // GET: Matches/Edit/5
@@ -69,12 +71,14 @@ namespace Futsal_1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Match match = db.Matches.Find(id);
-            if (match == null)
+            Match testMatch = db.Matches.Find(id);
+            if (testMatch == null)
             {
                 return HttpNotFound();
             }
-            return View(match);
+            ViewBag.AwayTeamId = new SelectList(db.Teams, "Id", "Name", testMatch.AwayTeamId);
+            ViewBag.HomeTeamId = new SelectList(db.Teams, "Id", "Name", testMatch.HomeTeamId);
+            return View(testMatch);
         }
 
         // POST: Matches/Edit/5
@@ -82,15 +86,17 @@ namespace Futsal_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,StartTime,EndTime")] Match match)
+        public ActionResult Edit([Bind(Include = "Id,StartTime,HomeTeamId,AwayTeamId")] Match testMatch)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(match).State = EntityState.Modified;
+                db.Entry(testMatch).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(match);
+            ViewBag.AwayTeamId = new SelectList(db.Teams, "Id", "Name", testMatch.AwayTeamId);
+            ViewBag.HomeTeamId = new SelectList(db.Teams, "Id", "Name", testMatch.HomeTeamId);
+            return View(testMatch);
         }
 
         // GET: Matches/Delete/5
@@ -100,12 +106,12 @@ namespace Futsal_1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Match match = db.Matches.Find(id);
-            if (match == null)
+            Match testMatch = db.Matches.Find(id);
+            if (testMatch == null)
             {
                 return HttpNotFound();
             }
-            return View(match);
+            return View(testMatch);
         }
 
         // POST: Matches/Delete/5
@@ -113,8 +119,8 @@ namespace Futsal_1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Match match = db.Matches.Find(id);
-            db.Matches.Remove(match);
+            Match testMatch = db.Matches.Find(id);
+            db.Matches.Remove(testMatch);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
