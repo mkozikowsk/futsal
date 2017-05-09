@@ -21,6 +21,8 @@ namespace Futsal_1.Models
 
         public virtual Coach Coach { get; set; }
         public virtual List<Player> Players { get; set; }
+        public virtual  List<SeasonLeauge> SeasonLeauges { get; set; }
+        
 
     }
 }

@@ -18,5 +18,8 @@ namespace Futsal_1.Context
         public DbSet<Coach> Coaches { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Arbiter> Arbiters { get; set; }
+        public DbSet<Season> Seasons { get; set; }
+
+        public DbSet<SeasonLeauge> SeasonLeauges { get; set; }
     }
 }

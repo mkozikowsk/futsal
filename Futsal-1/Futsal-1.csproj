@@ -191,10 +191,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Context\FutsalContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArbitersController.cs" />
     <Compile Include="Controllers\CoachesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
+    <Compile Include="Controllers\SeasonLeaugesController.cs" />
+    <Compile Include="Controllers\SeasonsController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="Controllers\MatchesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -228,6 +231,10 @@
     <Compile Include="Migrations\201705081141529_ArbiterUpdate.Designer.cs">
       <DependentUpon>201705081141529_ArbiterUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705091018410_Season.cs" />
+    <Compile Include="Migrations\201705091018410_Season.Designer.cs">
+      <DependentUpon>201705091018410_Season.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Arbiter.cs" />
@@ -235,6 +242,8 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Season.cs" />
+    <Compile Include="Models\SeasonLeauge.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -411,6 +420,21 @@
     <Content Include="Views\Matches\Index.cshtml" />
     <Content Include="Views\Matches\Create.cshtml" />
     <Content Include="Views\Matches\Delete.cshtml" />
+    <Content Include="Views\Arbiters\Create.cshtml" />
+    <Content Include="Views\Arbiters\Delete.cshtml" />
+    <Content Include="Views\Arbiters\Details.cshtml" />
+    <Content Include="Views\Arbiters\Edit.cshtml" />
+    <Content Include="Views\Arbiters\Index.cshtml" />
+    <Content Include="Views\Seasons\Create.cshtml" />
+    <Content Include="Views\Seasons\Delete.cshtml" />
+    <Content Include="Views\Seasons\Details.cshtml" />
+    <Content Include="Views\Seasons\Edit.cshtml" />
+    <Content Include="Views\Seasons\Index.cshtml" />
+    <Content Include="Views\SeasonLeauges\Create.cshtml" />
+    <Content Include="Views\SeasonLeauges\Delete.cshtml" />
+    <Content Include="Views\SeasonLeauges\Details.cshtml" />
+    <Content Include="Views\SeasonLeauges\Edit.cshtml" />
+    <Content Include="Views\SeasonLeauges\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -445,6 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705081141529_ArbiterUpdate.resx">
       <DependentUpon>201705081141529_ArbiterUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705091018410_Season.resx">
+      <DependentUpon>201705091018410_Season.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
