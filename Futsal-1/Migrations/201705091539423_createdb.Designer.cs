@@ -7,13 +7,13 @@ namespace Futsal_1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class testmatch : IMigrationMetadata
+    public sealed partial class createdb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(testmatch));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(createdb));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705041619034_testmatch"; }
+            get { return "201705091539423_createdb"; }
         }
         
         string IMigrationMetadata.Source

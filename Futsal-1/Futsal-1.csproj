@@ -203,45 +203,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705030916248_MatchMigration.cs" />
-    <Compile Include="Migrations\201705030916248_MatchMigration.Designer.cs">
-      <DependentUpon>201705030916248_MatchMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705041619034_testmatch.cs" />
-    <Compile Include="Migrations\201705041619034_testmatch.Designer.cs">
-      <DependentUpon>201705041619034_testmatch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705081044316_Matches.cs" />
-    <Compile Include="Migrations\201705081044316_Matches.Designer.cs">
-      <DependentUpon>201705081044316_Matches.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705081122429_Arbiter.cs" />
-    <Compile Include="Migrations\201705081122429_Arbiter.Designer.cs">
-      <DependentUpon>201705081122429_Arbiter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705081126333_updateArbiter.cs" />
-    <Compile Include="Migrations\201705081126333_updateArbiter.Designer.cs">
-      <DependentUpon>201705081126333_updateArbiter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705081137489_MatchesArbiter.cs" />
-    <Compile Include="Migrations\201705081137489_MatchesArbiter.Designer.cs">
-      <DependentUpon>201705081137489_MatchesArbiter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705081141529_ArbiterUpdate.cs" />
-    <Compile Include="Migrations\201705081141529_ArbiterUpdate.Designer.cs">
-      <DependentUpon>201705081141529_ArbiterUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705091018410_Season.cs" />
-    <Compile Include="Migrations\201705091018410_Season.Designer.cs">
-      <DependentUpon>201705091018410_Season.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705091059524_MatchSeason.cs" />
-    <Compile Include="Migrations\201705091059524_MatchSeason.Designer.cs">
-      <DependentUpon>201705091059524_MatchSeason.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705091310204_MatchSeason2.cs" />
-    <Compile Include="Migrations\201705091310204_MatchSeason2.Designer.cs">
-      <DependentUpon>201705091310204_MatchSeason2.cs</DependentUpon>
+    <Compile Include="Migrations\201705091539423_createdb.cs" />
+    <Compile Include="Migrations\201705091539423_createdb.Designer.cs">
+      <DependentUpon>201705091539423_createdb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -457,35 +421,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705030916248_MatchMigration.resx">
-      <DependentUpon>201705030916248_MatchMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705041619034_testmatch.resx">
-      <DependentUpon>201705041619034_testmatch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705081044316_Matches.resx">
-      <DependentUpon>201705081044316_Matches.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705081122429_Arbiter.resx">
-      <DependentUpon>201705081122429_Arbiter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705081126333_updateArbiter.resx">
-      <DependentUpon>201705081126333_updateArbiter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705081137489_MatchesArbiter.resx">
-      <DependentUpon>201705081137489_MatchesArbiter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705081141529_ArbiterUpdate.resx">
-      <DependentUpon>201705081141529_ArbiterUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705091018410_Season.resx">
-      <DependentUpon>201705091018410_Season.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705091059524_MatchSeason.resx">
-      <DependentUpon>201705091059524_MatchSeason.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705091310204_MatchSeason2.resx">
-      <DependentUpon>201705091310204_MatchSeason2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705091539423_createdb.resx">
+      <DependentUpon>201705091539423_createdb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
