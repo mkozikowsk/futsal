@@ -49,7 +49,7 @@ namespace Futsal_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Status,SeasonId,TeamId")] SeasonLeauge seasonLeauge)
+        public ActionResult Create([Bind(Include = "Id,Status,SeasonId")] SeasonLeauge seasonLeauge)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace Futsal_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Status,SeasonId,TeamId")] SeasonLeauge seasonLeauge)
+        public ActionResult Edit([Bind(Include = "Id,Status,SeasonId")] SeasonLeauge seasonLeauge)
         {
             if (ModelState.IsValid)
             {
