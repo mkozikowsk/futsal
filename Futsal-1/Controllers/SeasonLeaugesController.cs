@@ -18,7 +18,7 @@ namespace Futsal_1.Controllers
         // GET: SeasonLeauges
         public ActionResult Index()
         {
-            var seasonLeauges = db.SeasonLeauges.Include(s => s.Season).Include(s => s.Team);
+            var seasonLeauges = db.SeasonLeauges.Include(s => s.Season);
             return View(seasonLeauges.ToList());
         }
 
@@ -41,7 +41,6 @@ namespace Futsal_1.Controllers
         public ActionResult Create()
         {
             ViewBag.SeasonId = new SelectList(db.Seasons, "Id", "Id");
-            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name");
             return View();
         }
 
@@ -60,7 +59,6 @@ namespace Futsal_1.Controllers
             }
 
             ViewBag.SeasonId = new SelectList(db.Seasons, "Id", "Id", seasonLeauge.SeasonId);
-            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name", seasonLeauge.TeamId);
             return View(seasonLeauge);
         }
 
@@ -77,7 +75,6 @@ namespace Futsal_1.Controllers
                 return HttpNotFound();
             }
             ViewBag.SeasonId = new SelectList(db.Seasons, "Id", "Id", seasonLeauge.SeasonId);
-            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name", seasonLeauge.TeamId);
             return View(seasonLeauge);
         }
 
@@ -95,7 +92,6 @@ namespace Futsal_1.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.SeasonId = new SelectList(db.Seasons, "Id", "Id", seasonLeauge.SeasonId);
-            ViewBag.TeamId = new SelectList(db.Teams, "Id", "Name", seasonLeauge.TeamId);
             return View(seasonLeauge);
         }
 

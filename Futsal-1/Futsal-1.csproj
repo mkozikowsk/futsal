@@ -235,6 +235,10 @@
     <Compile Include="Migrations\201705091018410_Season.Designer.cs">
       <DependentUpon>201705091018410_Season.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705091059524_MatchSeason.cs" />
+    <Compile Include="Migrations\201705091059524_MatchSeason.Designer.cs">
+      <DependentUpon>201705091059524_MatchSeason.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Arbiter.cs" />
@@ -472,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705091018410_Season.resx">
       <DependentUpon>201705091018410_Season.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705091059524_MatchSeason.resx">
+      <DependentUpon>201705091059524_MatchSeason.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -13,9 +13,8 @@ namespace Futsal_1.Models
         public bool Status { get; set; }
 
         public int SeasonId { get; set; }   
-        public int TeamId { get; set; }
 
         public virtual Season Season { get; set; }
-        public virtual Team Team { get; set; }
+        public virtual List <Match> Matches { get; set; }
     }
 }
