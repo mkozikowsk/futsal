@@ -207,13 +207,23 @@
     <Compile Include="Migrations\201705111006496_League.Designer.cs">
       <DependentUpon>201705111006496_League.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111018537_MatchEvent.cs" />
+    <Compile Include="Migrations\201705111018537_MatchEvent.Designer.cs">
+      <DependentUpon>201705111018537_MatchEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111025068_eventType.cs" />
+    <Compile Include="Migrations\201705111025068_eventType.Designer.cs">
+      <DependentUpon>201705111025068_eventType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Arbiter.cs" />
     <Compile Include="Models\Coach.cs" />
+    <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\League.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MatchEvent.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\SeasonLeague.cs" />
@@ -424,6 +434,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705111006496_League.resx">
       <DependentUpon>201705111006496_League.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111018537_MatchEvent.resx">
+      <DependentUpon>201705111018537_MatchEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111025068_eventType.resx">
+      <DependentUpon>201705111025068_eventType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
