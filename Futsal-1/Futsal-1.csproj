@@ -193,8 +193,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArbitersController.cs" />
     <Compile Include="Controllers\CoachesController.cs" />
+    <Compile Include="Controllers\EventTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeaguesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MatchEventsController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\SeasonLeaugesController.cs" />
     <Compile Include="Controllers\SeasonsController.cs" />
@@ -418,6 +421,21 @@
     <Content Include="Views\SeasonLeauges\Details.cshtml" />
     <Content Include="Views\SeasonLeauges\Edit.cshtml" />
     <Content Include="Views\SeasonLeauges\Index.cshtml" />
+    <Content Include="Views\MatchEvents\Create.cshtml" />
+    <Content Include="Views\MatchEvents\Delete.cshtml" />
+    <Content Include="Views\MatchEvents\Details.cshtml" />
+    <Content Include="Views\MatchEvents\Edit.cshtml" />
+    <Content Include="Views\MatchEvents\Index.cshtml" />
+    <Content Include="Views\EventTypes\Create.cshtml" />
+    <Content Include="Views\EventTypes\Delete.cshtml" />
+    <Content Include="Views\EventTypes\Details.cshtml" />
+    <Content Include="Views\EventTypes\Edit.cshtml" />
+    <Content Include="Views\EventTypes\Index.cshtml" />
+    <Content Include="Views\Leagues\Create.cshtml" />
+    <Content Include="Views\Leagues\Delete.cshtml" />
+    <Content Include="Views\Leagues\Details.cshtml" />
+    <Content Include="Views\Leagues\Edit.cshtml" />
+    <Content Include="Views\Leagues\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

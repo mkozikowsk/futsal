@@ -22,5 +22,7 @@ namespace Futsal_1.Context
         public DbSet<SeasonLeague> SeasonLeauges { get; set; }
         public DbSet<League> Leagues { get; set; }
         public DbSet<MatchEvent> MatchEvents { get; set; }
+
+        public System.Data.Entity.DbSet<Futsal_1.Models.EventType> EventTypes { get; set; }
     }
 }
