@@ -7,14 +7,16 @@ using System.Web;
 
 namespace Futsal_1.Models
 {
-    public class SeasonLeauge
+    public class SeasonLeague
     {
         public int Id { get; set; }
         public bool Status { get; set; }
 
         public int SeasonId { get; set; }   
+        public int LeagueId { get; set; }
 
         public virtual Season Season { get; set; }
+        public virtual League League { get; set; }
         public virtual List <Match> Matches { get; set; }
     }
 }

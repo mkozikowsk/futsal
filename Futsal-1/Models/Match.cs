@@ -23,6 +23,6 @@ namespace Futsal_1.Models
         public virtual Team HomeTeam { get; set; }
         public virtual Team AwayTeam { get; set; }
         public virtual Arbiter Arbiter { get; set; }
-        public virtual SeasonLeauge SeasonLeauge { get; set; }
+        public virtual SeasonLeague SeasonLeauge { get; set; }
     }
 }

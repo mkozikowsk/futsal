@@ -203,15 +203,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111006496_League.cs" />
+    <Compile Include="Migrations\201705111006496_League.Designer.cs">
+      <DependentUpon>201705111006496_League.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Arbiter.cs" />
     <Compile Include="Models\Coach.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\League.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Season.cs" />
-    <Compile Include="Models\SeasonLeauge.cs" />
+    <Compile Include="Models\SeasonLeague.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -417,6 +422,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705111006496_League.resx">
+      <DependentUpon>201705111006496_League.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

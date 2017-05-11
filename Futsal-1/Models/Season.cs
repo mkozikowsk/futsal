@@ -14,6 +14,6 @@ namespace Futsal_1.Models
         [Display(Name = "Data zakończenia")]
         public DateTime DateTo { get; set; }
 
-        public virtual List<SeasonLeauge> SeasonLeauges { get; set; }
+        public virtual List<SeasonLeague> SeasonLeauges { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace Futsal_1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SeasonLeauge seasonLeauge = db.SeasonLeauges.Find(id);
+            SeasonLeague seasonLeauge = db.SeasonLeauges.Find(id);
             if (seasonLeauge == null)
             {
                 return HttpNotFound();
@@ -49,7 +49,7 @@ namespace Futsal_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Status,SeasonId,TeamId")] SeasonLeauge seasonLeauge)
+        public ActionResult Create([Bind(Include = "Id,Status,SeasonId,TeamId")] SeasonLeague seasonLeauge)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace Futsal_1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SeasonLeauge seasonLeauge = db.SeasonLeauges.Find(id);
+            SeasonLeague seasonLeauge = db.SeasonLeauges.Find(id);
             if (seasonLeauge == null)
             {
                 return HttpNotFound();
@@ -83,7 +83,7 @@ namespace Futsal_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Status,SeasonId,TeamId")] SeasonLeauge seasonLeauge)
+        public ActionResult Edit([Bind(Include = "Id,Status,SeasonId,TeamId")] SeasonLeague seasonLeauge)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace Futsal_1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SeasonLeauge seasonLeauge = db.SeasonLeauges.Find(id);
+            SeasonLeague seasonLeauge = db.SeasonLeauges.Find(id);
             if (seasonLeauge == null)
             {
                 return HttpNotFound();
@@ -115,7 +115,7 @@ namespace Futsal_1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            SeasonLeauge seasonLeauge = db.SeasonLeauges.Find(id);
+            SeasonLeague seasonLeauge = db.SeasonLeauges.Find(id);
             db.SeasonLeauges.Remove(seasonLeauge);
             db.SaveChanges();
             return RedirectToAction("Index");
